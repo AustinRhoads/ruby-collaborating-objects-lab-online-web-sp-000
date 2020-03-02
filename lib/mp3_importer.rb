@@ -5,9 +5,11 @@ attr_accessor :path
 
 def initialize(file)
 @path = file
-files = Dir.children(@path)
+@files = Dir.children(@path)
 end
 
-
+def files 
+@files
+end
 
 end
