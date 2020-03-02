@@ -12,7 +12,7 @@ def files
 @files
 end
 
-def import 
+def import
 @files.each{|file| Song.new_by_filename(fil)}
 end
 
