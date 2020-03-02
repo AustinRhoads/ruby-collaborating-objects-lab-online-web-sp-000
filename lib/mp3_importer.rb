@@ -1,7 +1,9 @@
 class MP3Importer
 
-def initalize(file)
+attr_accessor :path
 
+def initalize(file)
+@path = file
 end
 
 
