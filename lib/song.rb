@@ -19,8 +19,8 @@ end
 def self.new_by_filename(name)
 file = name.split(" - ")
   song = Song.new(file[1])
-  artist = Artist.find_or_create_by_name(file[0])
-  song.artist = artist
+  song.artist = Artist.find_or_create_by_name(file[0])
+  song.artist.add_song << song
   song
 end
 
