@@ -9,9 +9,7 @@ def initialize(name)
 @@all << self
 end
 
-def artist(name)
-@artist = name
-end
+
 
 
 def self.all
@@ -21,7 +19,7 @@ end
 def self.new_by_filename(name)
 file = name.split(" - ")
   song = Song.new(file[1])
-  artist = Artist.new(file[0])
+  artist = Artist.find_or_create_by_name(file[0])
   song.artist = artist
   song
 end
