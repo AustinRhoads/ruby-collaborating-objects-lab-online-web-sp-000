@@ -8,7 +8,7 @@ def initialize(file)
 @files = Dir.children(@path)
 end
 
-def files 
+def files
 @files
 end
 
